@@ -3,79 +3,193 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Sanitär Zürich & Thurgau | Kurt Sanitär & Service</title>
 
-<meta name="description" content="Professionelle Sanitärarbeiten in Zürich & Thurgau. Küchenanschluss, WC ersetzen, Reparaturen & Service vom Fachbetrieb. Jetzt Termin bei Kurt Sanitär & Service sichern.">
+<meta name="description" content="Professionelle Sanitärarbeiten in Zürich & Thurgau. Küchenanschluss, WC ersetzen, Reparaturen & Service vom Fachbetrieb.">
 
-<link rel="icon" href="favicon.PNG">
+<link rel="icon" href="Icon.PNG">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 body{
   margin:0;
   font-family:'Poppins',sans-serif;
+  background:#f8fafc;
   color:#1e293b;
-  background:white;
 }
 
+/* NAVIGATION */
+
 nav{
+  position:fixed;
+  width:100%;
+  background:white;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:25px 50px;
-  border-bottom:1px solid #e2e8f0;
+  padding:20px 40px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+  z-index:1000;
 }
 
-nav a{
+.logo{
+  font-weight:800;
+  color:#0d3b66;
+  font-size:22px;
+}
+
+.nav-links{
+  display:flex;
+  gap:30px;
+}
+
+.nav-links a{
   text-decoration:none;
   color:#0d3b66;
   font-weight:600;
-  font-size:18px;
-  margin-left:30px;
 }
+
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* HERO */
 
 .hero{
+  height:100vh;
+  background:linear-gradient(rgba(13,59,102,0.7),rgba(13,59,102,0.7)),
+  url("https://images.unsplash.com/photo-1581578731548-c64695cc6952") center/cover;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
   text-align:center;
-  padding:160px 20px;
+  color:white;
+  padding:20px;
 }
 
-h1{
+.hero h1{
   font-size:60px;
-  font-weight:800;
-  color:#0d3b66;
-  margin-bottom:30px;
+  margin-bottom:20px;
 }
+
+.hero p{
+  font-size:22px;
+  max-width:700px;
+}
+
+.btn{
+  margin-top:30px;
+  padding:16px 35px;
+  background:white;
+  color:#0d3b66;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* SECTIONS */
 
 section{
   padding:120px 40px;
-  max-width:1100px;
+  max-width:1200px;
   margin:auto;
 }
 
 h2{
-  font-size:36px;
+  font-size:40px;
   color:#0d3b66;
-  margin-bottom:40px;
+  margin-bottom:50px;
+  text-align:center;
 }
 
-.btn{
-  display:inline-block;
+/* CARDS */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:white;
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  transition:0.3s;
+  text-align:center;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+.card h3{
+  font-size:26px;
+  margin-bottom:15px;
+  color:#0d3b66;
+}
+
+.card p{
+  font-size:18px;
+}
+
+.price{
+  margin-top:15px;
+  font-weight:700;
+  font-size:20px;
+  color:#145da0;
+}
+
+/* ABOUT */
+
+.about{
   background:#0d3b66;
   color:white;
-  padding:18px 35px;
-  border-radius:6px;
-  text-decoration:none;
-  font-weight:600;
-  margin-top:20px;
+  border-radius:20px;
+  padding:60px;
 }
+
+/* FOOTER */
 
 footer{
   background:#0d3b66;
   color:white;
   text-align:center;
-  padding:40px;
-  margin-top:120px;
+  padding:50px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.nav-links{
+  display:none;
+  flex-direction:column;
+  position:absolute;
+  top:70px;
+  right:20px;
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.nav-links.active{
+  display:flex;
+}
+
+.menu-toggle{
+  display:block;
+}
+
+.hero h1{
+  font-size:38px;
+}
+
 }
 </style>
 </head>
@@ -83,48 +197,69 @@ footer{
 <body>
 
 <nav>
-<div><strong>Kurt Sanitär & Service</strong></div>
-<div>
-<a href="index.html">Start</a>
-<a href="leistungen.html">Leistungen</a>
-<a href="ueber-uns.html">Über uns</a>
-<a href="kontakt.html">Kontakt</a>
+<div class="logo">Kurt Sanitär & Service</div>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<div class="nav-links" id="navLinks">
+<a href="#">Start</a>
+<a href="#">Leistungen</a>
+<a href="#">Über uns</a>
+<a href="#">Kontakt</a>
 </div>
 </nav>
 
 <div class="hero">
 <h1>Sanitär in Zürich & Thurgau</h1>
-<p style="font-size:22px;">
-Ihr Fachbetrieb für Sanitärinstallationen, Reparaturen und Service 
-in Zürich, Frauenfeld und im gesamten Kanton Thurgau.
-</p>
-<br>
-<a href="kontakt.html" class="btn">Jetzt Termin anfragen</a>
+<p>Moderne Sanitärinstallationen, Reparaturen & Service vom Fachbetrieb.</p>
+<a href="tel:+41767300212" class="btn">Jetzt anrufen</a>
 </div>
 
 <section>
-<h2>Professionelle Sanitärarbeiten</h2>
-<p style="font-size:22px; line-height:1.7;">
-Kurt Sanitär & Service bietet fachgerechte Sanitärinstallationen 
-in Zürich und Thurgau. 
-Ob Küchenanschluss, WC ersetzen, Armaturenwechsel oder Reparaturen – 
-wir stehen für saubere Arbeit, faire Preise und schnelle Terminvergabe.
-</p>
+<h2>Unsere Leistungen</h2>
+<div class="grid">
+
+<div class="card">
+<h3>🔧 Küchenanschluss</h3>
+<p>Professionelle Installation & Anschluss Ihrer Küche.</p>
+<div class="price">ab 990 CHF</div>
+</div>
+
+<div class="card">
+<h3>🚽 WC ersetzen</h3>
+<p>Demontage & fachgerechter Einbau neuer Anlagen.</p>
+<div class="price">ab 750 CHF</div>
+</div>
+
+<div class="card">
+<h3>🚿 Reparaturen</h3>
+<p>Schnelle Hilfe bei Lecks & Defekten.</p>
+<div class="price">ab 180 CHF</div>
+</div>
+
+</div>
 </section>
 
 <section>
-<h2>Sanitärservice in Zürich & Thurgau</h2>
-<p style="font-size:22px; line-height:1.7;">
-Als erfahrener Sanitärbetrieb betreuen wir Kunden in Zürich, Frauenfeld 
-und im gesamten Kanton Thurgau. 
-Unsere Leistungen umfassen Neuinstallationen, Umbauten, Servicearbeiten 
-und Reparaturen für Privatkunden und kleinere Bauprojekte.
-</p>
+<h2>Über uns</h2>
+<div class="about">
+<h3>Geschäftsführer & Inhaber</h3>
+<p><strong>Berkay Kurt</strong><br>Sanitär Fachmann</p>
+
+<br>
+
+<h3>Assistent der Geschäftsleitung</h3>
+<p><strong>Pia Jasmine Kurt</strong><br>Leiterin Administration / Finanzen</p>
+</div>
 </section>
 
 <footer>
-© 2026 Kurt Sanitär & Service | Sanitär Zürich & Thurgau
+© 2026 Kurt Sanitär & Service | Zürich & Thurgau
 </footer>
+
+<script>
+function toggleMenu(){
+document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
