@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Über uns | Kurt Sanitär</title>
+<link rel="icon" href="favicon.PNG">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'Poppins',sans-serif;padding:80px;max-width:900px;margin:auto}
+h1{color:#0d3b66}
+</style>
+</head>
+
+<body>
+
+<h1>Über Kurt Sanitär & Service</h1>
+<p>Ich bin gelernter Anlagenmechaniker SHK und aktuell als Rohrnetzmonteur tätig. Mein Ziel ist es, professionelle Sanitärarbeiten mit höchster Präzision anzubieten.</p>
+
+</body>
+</html>
