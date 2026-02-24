@@ -2,31 +2,112 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<title>Leistungen | Kurt Sanitär</title>
+<title>Leistungen | Kurt Sanitär & Service</title>
 <link rel="icon" href="favicon.PNG">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
-body{margin:0;font-family:'Poppins',sans-serif}
-nav{display:flex;justify-content:space-between;padding:20px 40px;border-bottom:1px solid #eee}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;padding:80px;max-width:1100px;margin:auto}
-.card{border:1px solid #e2e8f0;padding:30px;border-radius:10px}
-h2{text-align:center;margin-top:50px;color:#0d3b66}
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:white;
+  color:#1e293b;
+}
+
+h1{
+  text-align:center;
+  margin-top:80px;
+  font-size:36px;
+  color:#0d3b66;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:40px;
+  max-width:1100px;
+  margin:80px auto;
+  padding:0 20px;
+}
+
+.card{
+  border:1px solid #e2e8f0;
+  padding:40px;
+  border-radius:15px;
+  transition:0.3s;
+}
+
+.card:hover{
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+details summary{
+  font-size:20px;
+  font-weight:600;
+  cursor:pointer;
+  color:#0d3b66;
+}
+
+details summary::-webkit-details-marker{
+  display:none;
+}
+
+details summary::after{
+  content:" +";
+  float:right;
+}
+
+details[open] summary::after{
+  content:" −";
+}
+
+.price{
+  margin-top:20px;
+  font-weight:600;
+  font-size:18px;
+  color:#0d3b66;
+}
 </style>
 </head>
 
 <body>
 
-<nav>
-<a href="index.html">Zurück zur Startseite</a>
-</nav>
-
-<h2>Unsere Leistungen</h2>
+<h1>Unsere Leistungen</h1>
 
 <div class="grid">
-<div class="card"><h3>Küchenanschluss</h3><p>ab 990 CHF</p></div>
-<div class="card"><h3>WC ersetzen</h3><p>ab 750 CHF</p></div>
-<div class="card"><h3>Armaturen wechseln</h3><p>ab 300 CHF</p></div>
-<div class="card"><h3>Reparaturen</h3><p>ab 180 CHF</p></div>
+
+<div class="card">
+<details>
+<summary>Küchenanschluss</summary>
+<p>Professioneller Anschluss inkl. Prüfung.</p>
+<div class="price">ab 990 CHF</div>
+</details>
+</div>
+
+<div class="card">
+<details>
+<summary>WC ersetzen</summary>
+<p>Fachgerechte Demontage und Einbau.</p>
+<div class="price">ab 750 CHF</div>
+</details>
+</div>
+
+<div class="card">
+<details>
+<summary>Armaturen wechseln</summary>
+<p>Austausch von Küchen- oder Badarmaturen.</p>
+<div class="price">ab 300 CHF</div>
+</details>
+</div>
+
+<div class="card">
+<details>
+<summary>Reparaturen & Service</summary>
+<p>Schnelle Hilfe bei Defekten.</p>
+<div class="price">ab 180 CHF</div>
+</details>
+</div>
+
 </div>
 
 </body>
