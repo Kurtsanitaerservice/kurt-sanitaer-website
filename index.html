@@ -10,19 +10,38 @@
 <title>Kurt Sanitär & Service</title>
 
 <style>
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f7fa;color:#333}
+body{
+  margin:0;
+  font-family:'Poppins', sans-serif;
+  background:#f8fafc;
+  color:#1e293b;
+}
 header{background:#0d3b66;color:white;padding:40px 20px;text-align:center}
 header img{max-width:150px;margin-bottom:15px}
-section{padding:50px 20px;max-width:1100px;margin:auto}
-h2{color:#0d3b66;margin-bottom:20px}
+section{
+  padding:80px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+h2{
+  font-size:28px;
+  font-weight:700;
+  margin-bottom:25px;
+  color:#0f172a;
+}
 .btn{display:inline-block;padding:12px 22px;background:#0d3b66;color:white;text-decoration:none;border-radius:5px;margin-top:15px}
 .services, .prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
 .card{
   background:white;
-  padding:25px;
-  border-radius:12px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  padding:30px;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
   transition: all 0.3s ease;
+}
+
+.card:hover{
+  transform: translateY(-8px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.12);
 }
 
 .card:hover{
@@ -66,6 +85,13 @@ footer{background:#111;color:white;text-align:center;padding:20px;font-size:14px
   </a>
 </header>
 <section>
+  animation: fadeIn 0.8s ease forwards;
+  opacity:0;
+}
+
+@keyframes fadeIn{
+  to{opacity:1;}
+}
 <div class="hero-text">
 <h2>Ihr zuverlässiger Sanitär-Fachmann</h2>
 <p>Gelernter Anlagenmechaniker SHK bietet professionelle, saubere und zuverlässige Sanitärarbeiten für Privatkunden, Vermieter und Umbauprojekte. Schnell vor Ort – faire Fixpreise – fachgerechte Ausführung.</p>
