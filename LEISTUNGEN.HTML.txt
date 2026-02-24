@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Leistungen | Kurt Sanitär</title>
+<link rel="icon" href="favicon.PNG">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Poppins',sans-serif}
+nav{display:flex;justify-content:space-between;padding:20px 40px;border-bottom:1px solid #eee}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;padding:80px;max-width:1100px;margin:auto}
+.card{border:1px solid #e2e8f0;padding:30px;border-radius:10px}
+h2{text-align:center;margin-top:50px;color:#0d3b66}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Zurück zur Startseite</a>
+</nav>
+
+<h2>Unsere Leistungen</h2>
+
+<div class="grid">
+<div class="card"><h3>Küchenanschluss</h3><p>ab 990 CHF</p></div>
+<div class="card"><h3>WC ersetzen</h3><p>ab 750 CHF</p></div>
+<div class="card"><h3>Armaturen wechseln</h3><p>ab 300 CHF</p></div>
+<div class="card"><h3>Reparaturen</h3><p>ab 180 CHF</p></div>
+</div>
+
+</body>
+</html>
