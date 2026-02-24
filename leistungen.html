@@ -2,154 +2,50 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Leistungen | Kurt Sanitär & Service</title>
-<link rel="icon" href="favicon.PNG">
+<link rel="icon" href="Icon.PNG">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-body{
-  margin:0;
-  font-family:'Poppins', sans-serif;
-  background:white;
-  color:#1e293b;
-}
-
-h1{
-  text-align:center;
-  margin:150px 0 120px 0;
-  font-size:64px;
-  font-weight:800;
-  color:#0d3b66;
-}
-
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:0 40px 150px 40px;
-}
-
-.service{
-  padding:100px 0;
-  border-bottom:1px solid #e2e8f0;
-}
-
-details summary{
-  list-style:none;
-  cursor:pointer;
-  font-size:48px;
-  font-weight:700;
-  color:#0d3b66;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-details summary::-webkit-details-marker{
-  display:none;
-}
-
-.icon-title{
-  display:flex;
-  align-items:center;
-  gap:40px;
-}
-
-.icon{
-  font-size:80px;
-}
-
-details summary::after{
-  content:"+";
-  font-size:60px;
-  font-weight:400;
-}
-
-details[open] summary::after{
-  content:"−";
-}
-
-.service-content{
-  margin-top:50px;
-  font-size:26px;
-  line-height:1.7;
-}
-
-.price{
-  margin-top:30px;
-  font-size:32px;
-  font-weight:700;
-  color:#0d3b66;
-}
+body{margin:0;font-family:'Poppins',sans-serif}
+nav{position:fixed;width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:white;box-shadow:0 2px 10px rgba(0,0,0,0.05)}
+.logo{font-weight:800;color:#0d3b66;font-size:22px}
+.menu-btn{font-size:28px;cursor:pointer;color:#0d3b66}
+.side-menu{position:fixed;top:0;right:-260px;width:250px;height:100%;background:#0d3b66;padding:120px 30px;display:flex;flex-direction:column;transition:0.4s}
+.side-menu a{color:white;text-decoration:none;font-size:20px;margin-bottom:30px}
+.side-menu.active{right:0}
+section{padding:140px 40px;max-width:1000px;margin:auto}
+.card{background:#f1f5f9;padding:40px;border-radius:15px;margin-bottom:30px;font-size:20px}
 </style>
 </head>
 
 <body>
 
+<nav>
+<div class="logo">Kurt Sanitär & Service</div>
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+</nav>
+
+<div class="side-menu" id="menu">
+<a href="index.html">Start</a>
+<a href="leistungen.html">Leistungen</a>
+<a href="ueber-uns.html">Über uns</a>
+<a href="kontakt.html">Kontakt</a>
+</div>
+
+<section>
 <h1>Unsere Leistungen</h1>
+<div class="card">🔧 Küchenanschluss – ab 990 CHF</div>
+<div class="card">🚽 WC ersetzen – ab 750 CHF</div>
+<div class="card">🚿 Reparaturen & Service – ab 180 CHF</div>
+</section>
 
-<div class="container">
-
-<div class="service">
-<details>
-<summary>
-<div class="icon-title">
-<span class="icon">🔧</span>
-<span>Küchenanschluss</span>
-</div>
-</summary>
-<div class="service-content">
-Professioneller Anschluss inkl. Prüfung und Dichtheitskontrolle.
-<div class="price">ab 990 CHF</div>
-</div>
-</details>
-</div>
-
-<div class="service">
-<details>
-<summary>
-<div class="icon-title">
-<span class="icon">🚽</span>
-<span>WC ersetzen</span>
-</div>
-</summary>
-<div class="service-content">
-Demontage und fachgerechter Einbau inkl. Entsorgung.
-<div class="price">ab 750 CHF</div>
-</div>
-</details>
-</div>
-
-<div class="service">
-<details>
-<summary>
-<div class="icon-title">
-<span class="icon">🚿</span>
-<span>Armaturen wechseln</span>
-</div>
-</summary>
-<div class="service-content">
-Sauberer Austausch von Küchen- oder Badarmaturen.
-<div class="price">ab 300 CHF</div>
-</div>
-</details>
-</div>
-
-<div class="service">
-<details>
-<summary>
-<div class="icon-title">
-<span class="icon">🛠</span>
-<span>Reparaturen & Service</span>
-</div>
-</summary>
-<div class="service-content">
-Schnelle Hilfe bei Undichtigkeiten und Defekten.
-<div class="price">ab 180 CHF</div>
-</div>
-</details>
-</div>
-
-</div>
+<script>
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
