@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kurt Sanitär & Service</title>
+<style>
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f7fa;color:#333}
+header{background:#0d3b66;color:white;padding:40px 20px;text-align:center}
+header img{max-width:150px;margin-bottom:15px}
+section{padding:50px 20px;max-width:1100px;margin:auto}
+h2{color:#0d3b66;margin-bottom:20px}
+.btn{display:inline-block;padding:12px 22px;background:#0d3b66;color:white;text-decoration:none;border-radius:5px;margin-top:15px}
+.services, .prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:white;padding:20px;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.05)}
+.price{font-weight:bold;color:#0d3b66;margin-top:10px}
+form input, form textarea{width:100%;padding:12px;margin-bottom:15px;border:1px solid #ccc;border-radius:5px}
+form button{padding:12px 20px;background:#0d3b66;color:white;border:none;border-radius:5px;cursor:pointer}
+footer{background:#111;color:white;text-align:center;padding:20px;font-size:14px}
+.location{background:#e9f1f7;padding:30px;border-radius:8px}
+.hero-text{max-width:700px;margin:auto}
+@media(max-width:600px){header{padding:30px 15px}}
+</style>
+</head>
+<body>
+
+<header>
+<!-- LOGO HIER EINFÜGEN -->
+<img src="logo.png" alt="Kurt Sanitär Logo">
+<h1>Kurt Sanitär & Service</h1>
+<p>Professionelle Sanitärarbeiten in Thurgau & Zürich</p>
+<a href="tel:+41790000000" class="btn">Jetzt anrufen</a>
+</header>
+
+<section>
+<div class="hero-text">
+<h2>Ihr zuverlässiger Sanitär-Fachmann</h2>
+<p>Gelernter Anlagenmechaniker SHK bietet professionelle, saubere und zuverlässige Sanitärarbeiten für Privatkunden, Vermieter und Umbauprojekte. Schnell vor Ort – faire Fixpreise – fachgerechte Ausführung.</p>
+</div>
+</section>
+
+<section>
+<h2>Unsere Leistungen</h2>
+<div class="services">
+<div class="card">Küchenanschlüsse</div>
+<div class="card">WC & Lavabo ersetzen</div>
+<div class="card">Armaturen wechseln</div>
+<div class="card">Reparaturen & Service</div>
+<div class="card">Heizkörper montieren</div>
+<div class="card">Kleine Badumbauten</div>
+</div>
+</section>
+
+<section>
+<h2>Transparente Preise</h2>
+<div class="prices">
+<div class="card">
+Küchenanschluss
+<div class="price">ab 990 CHF</div>
+</div>
+<div class="card">
+Armatur wechseln
+<div class="price">ab 300 CHF</div>
+</div>
+<div class="card">
+WC ersetzen
+<div class="price">ab 750 CHF</div>
+</div>
+<div class="card">
+Lavabo ersetzen
+<div class="price">ab 600 CHF</div>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Warum Kurt Sanitär & Service?</h2>
+<ul>
+<li>Gelernter SHK-Fachmann</li>
+<li>Saubere & präzise Arbeit</li>
+<li>Schnelle Terminvergabe</li>
+<li>Faire & transparente Preise</li>
+<li>Tätig in Thurgau & Zürich</li>
+</ul>
+</section>
+
+<section class="location">
+<h2>Standorte</h2>
+<p><strong>Region Thurgau</strong></p>
+<p><strong>Region Zürich</strong></p>
+<p>Anfahrt nach Vereinbarung.</p>
+</section>
+
+<section>
+<h2>Kontaktformular</h2>
+<form action="https://formsubmit.co/deine-email@beispiel.ch" method="POST">
+<input type="text" name="name" placeholder="Ihr Name" required>
+<input type="email" name="email" placeholder="Ihre E-Mail" required>
+<input type="tel" name="phone" placeholder="Telefonnummer">
+<textarea name="message" rows="5" placeholder="Ihre Anfrage..." required></textarea>
+<button type="submit">Anfrage senden</button>
+</form>
+<p>Oder direkt anrufen: 079 000 00 00</p>
+</section>
+
+<footer>
+© 2026 Kurt Sanitär & Service | Thurgau & Zürich
+</footer>
+
+</body>
+</html>
