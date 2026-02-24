@@ -3,79 +3,62 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kurt Sanitär & Service | Zürich & Thurgau</title>
-<link rel="icon" href="Icon.PNG">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<title>Test Menü</title>
 
 <style>
-body{margin:0;font-family:'Poppins',sans-serif;background:white;color:#1e293b;overflow-x:hidden}
+body{margin:0;font-family:Arial}
 
 /* NAV */
 nav{
 position:fixed;
+top:0;
+left:0;
 width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 40px;
+padding:20px 30px;
 background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
 z-index:1000;
 }
-.logo{font-weight:800;color:#0d3b66;font-size:22px}
-.menu-btn{font-size:30px;cursor:pointer;color:#0d3b66}
+
+.logo{
+font-weight:bold;
+color:#0d3b66;
+font-size:20px;
+}
+
+.menu-btn{
+font-size:30px;
+cursor:pointer;
+color:#0d3b66;
+}
 
 /* SIDE MENU */
 .side-menu{
 position:fixed;
 top:0;
-right:-100%;
+right:-300px;
 width:300px;
-height:100%;
+height:100vh;
 background:#0d3b66;
 padding:120px 40px;
 display:flex;
 flex-direction:column;
 transition:0.4s ease;
-box-shadow:-10px 0 30px rgba(0,0,0,0.2);
+z-index:2000;
 }
+
 .side-menu a{
 color:white;
 text-decoration:none;
 font-size:22px;
-margin-bottom:35px;
+margin-bottom:30px;
 }
-.side-menu.active{right:0}
 
-/* HERO */
-.hero{
-height:100vh;
-background:linear-gradient(rgba(13,59,102,0.7),rgba(13,59,102,0.7)),
-url("https://images.unsplash.com/photo-1581578731548-c64695cc6952") center/cover;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
-padding:20px;
-}
-.hero h1{font-size:55px;margin-bottom:20px}
-.hero p{font-size:22px}
-.btn{
-margin-top:25px;
-padding:15px 35px;
-background:white;
-color:#0d3b66;
-border-radius:6px;
-text-decoration:none;
-font-weight:600;
-}
-footer{
-background:#0d3b66;
-color:white;
-text-align:center;
-padding:50px;
+.side-menu.active{
+right:0;
 }
 </style>
 </head>
@@ -88,19 +71,11 @@ padding:50px;
 </nav>
 
 <div class="side-menu" id="menu">
-<a href="index.html">Start</a>
-<a href="leistungen.html">Leistungen</a>
-<a href="ueber-uns.html">Über uns</a>
-<a href="kontakt.html">Kontakt</a>
+<a href="#">Start</a>
+<a href="#">Leistungen</a>
+<a href="#">Über uns</a>
+<a href="#">Kontakt</a>
 </div>
-
-<div class="hero">
-<h1>Sanitär in Zürich & Thurgau</h1>
-<p>Saubere Installationen. Präzise Arbeit. Zuverlässiger Service.</p>
-<a href="kontakt.html" class="btn">Jetzt Termin anfragen</a>
-</div>
-
-<footer>© 2026 Kurt Sanitär & Service</footer>
 
 <script>
 function toggleMenu(){
