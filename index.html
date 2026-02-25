@@ -7,114 +7,136 @@
 <link rel="icon" href="Icon.PNG">
 
 <style>
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box;}
 
 body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  overflow-x:hidden;
+margin:0;
+font-family:Arial, sans-serif;
+overflow-x:hidden;
 }
 
 /* NAVIGATION */
 nav{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:70px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:0 30px;
-  background:white;
-  box-shadow:0 2px 15px rgba(0,0,0,0.1);
-  z-index:10000;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:70px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 30px;
+background:white;
+box-shadow:0 2px 15px rgba(0,0,0,0.1);
+z-index:10000;
 }
 
 .logo{
-  font-size:20px;
-  font-weight:bold;
-  color:#0d3b66;
+font-size:20px;
+font-weight:bold;
+color:#0d3b66;
 }
 
 .menu-btn{
-  font-size:34px;
-  cursor:pointer;
-  color:#0d3b66;
+font-size:34px;
+cursor:pointer;
+color:#0d3b66;
 }
 
 /* SIDE MENU */
 .side-menu{
-  position:fixed;
-  top:0;
-  right:-100%;
-  width:85%;
-  max-width:380px;
-  height:100vh;
-  background:#0d3b66;
-  padding:120px 40px;
-  display:flex;
-  flex-direction:column;
-  transition:0.4s ease;
-  z-index:9999;
+position:fixed;
+top:0;
+right:-100%;
+width:85%;
+max-width:380px;
+height:100vh;
+background:#0d3b66;
+padding:120px 40px;
+display:flex;
+flex-direction:column;
+transition:0.4s ease;
+z-index:9999;
 }
 
 .side-menu a{
-  color:white;
-  text-decoration:none;
-  font-size:24px;
-  margin-bottom:40px;
-  display:block;
+color:white;
+text-decoration:none;
+font-size:24px;
+margin-bottom:40px;
 }
 
-/* HERO MIT WASSER */
+/* HERO */
 .hero{
-  height:100vh;
-  background:
-  linear-gradient(rgba(13,59,102,0.75),rgba(13,59,102,0.75)),
-  url("https://images.unsplash.com/photo-1502741338009-cac2772e18bc") center/cover fixed no-repeat;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  color:white;
-  padding:20px;
+height:100vh;
+background:
+linear-gradient(rgba(13,59,102,0.75),rgba(13,59,102,0.75)),
+url("https://images.unsplash.com/photo-1502741338009-cac2772e18bc") center/cover fixed no-repeat;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
 }
 
 .hero h1{
-  font-size:48px;
-  margin-bottom:20px;
+font-size:48px;
+margin-bottom:20px;
 }
 
 .hero p{
-  font-size:20px;
-  max-width:600px;
+font-size:20px;
+max-width:600px;
 }
 
 .btn{
-  margin-top:30px;
-  padding:15px 35px;
-  background:white;
-  color:#0d3b66;
-  text-decoration:none;
-  border-radius:6px;
-  font-weight:bold;
-  transition:0.3s;
+margin-top:30px;
+padding:15px 35px;
+background:white;
+color:#0d3b66;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
+transition:0.3s;
 }
 
 .btn:hover{
-  background:#145da0;
-  color:white;
+background:#145da0;
+color:white;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+color:white;
+text-decoration:none;
+box-shadow:0 4px 15px rgba(0,0,0,0.3);
+transition:0.3s;
+z-index:10000;
+}
+
+.whatsapp-btn:hover{
+transform:scale(1.1);
+background:#1ebe5d;
 }
 
 footer{
-  background:#0d3b66;
-  color:white;
-  text-align:center;
-  padding:40px;
+background:#0d3b66;
+color:white;
+text-align:center;
+padding:40px;
 }
 </style>
 </head>
@@ -122,35 +144,42 @@ footer{
 <body>
 
 <nav>
-  <div class="logo">Kurt Sanitär & Service</div>
-  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+<div class="logo">Kurt Sanitär & Service</div>
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
 </nav>
 
 <div class="side-menu" id="menu">
-  <a href="index.html">Start</a>
-  <a href="leistungen.html">Leistungen</a>
-  <a href="ueber-uns.html">Über uns</a>
-  <a href="kontakt.html">Kontakt</a>
+<a href="index.html">Start</a>
+<a href="leistungen.html">Leistungen</a>
+<a href="ueber-uns.html">Über uns</a>
+<a href="kontakt.html">Kontakt</a>
 </div>
 
 <div class="hero">
-  <h1>Sanitär in Zürich & Thurgau</h1>
-  <p>Saubere Installationen. Präzise Arbeit. Zuverlässiger Service.</p>
-  <a href="kontakt.html" class="btn">Jetzt Termin anfragen</a>
+<h1>Sanitär in Zürich & Thurgau</h1>
+<p>Saubere Installationen. Präzise Arbeit. Zuverlässiger Service.</p>
+<a href="kontakt.html" class="btn">Jetzt Termin anfragen</a>
 </div>
 
 <footer>
-  © 2026 Kurt Sanitär & Service
+© 2026 Kurt Sanitär & Service
 </footer>
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/41767300212?text=Hallo%20ich%20interessiere%20mich%20für%20Ihre%20Sanitärarbeiten"
+class="whatsapp-btn"
+target="_blank">
+💬
+</a>
 
 <script>
 function toggleMenu(){
-  var menu = document.getElementById("menu");
-  if(menu.style.right === "0px"){
-    menu.style.right = "-100%";
-  } else {
-    menu.style.right = "0";
-  }
+var menu=document.getElementById("menu");
+if(menu.style.right==="0px"){
+menu.style.right="-100%";
+}else{
+menu.style.right="0";
+}
 }
 </script>
 
