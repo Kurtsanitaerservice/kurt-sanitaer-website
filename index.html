@@ -66,15 +66,15 @@ nav{
   text-decoration:none;
   font-size:24px;
   margin-bottom:40px;
-  width:100%;
   display:block;
 }
 
-/* HERO */
+/* HERO MIT WASSER */
 .hero{
   height:100vh;
-  background:linear-gradient(rgba(13,59,102,0.75),rgba(13,59,102,0.75)),
-  url("https://images.unsplash.com/photo-1581578731548-c64695cc6952") center/cover no-repeat;
+  background:
+  linear-gradient(rgba(13,59,102,0.75),rgba(13,59,102,0.75)),
+  url("https://images.unsplash.com/photo-1502741338009-cac2772e18bc") center/cover fixed no-repeat;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -102,6 +102,12 @@ nav{
   text-decoration:none;
   border-radius:6px;
   font-weight:bold;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#145da0;
+  color:white;
 }
 
 footer{
@@ -140,7 +146,6 @@ footer{
 <script>
 function toggleMenu(){
   var menu = document.getElementById("menu");
-
   if(menu.style.right === "0px"){
     menu.style.right = "-100%";
   } else {
